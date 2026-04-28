@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --light-blue: #00a8e8;
+            --dark-blue: #003366;
+            --white: #ffffff;
+            --gray: #f8f9fa;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray) 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .icon-wrapper {
+            margin-right: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dna-icon {
+            width: 100px;
+            height: 100px;
+        }
+
+        .text-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .brand-name-english {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--dark-blue);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .labs-suffix {
+            color: var(--light-blue);
+        }
+
+        /* SVG Helix Animation style */
+        .helix-path {
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+
+        .helix-a { stroke: var(--primary-blue); }
+        .helix-b { stroke: var(--light-blue); }
+        .helix-bar { stroke: rgba(0, 86, 179, 0.3); stroke-width: 4; }
+
+    </style>
+</head>
+<body>
+
+<div class="logo-container" id="logo">
+    <div class="icon-wrapper">
+        <svg class="dna-icon" viewBox="0 0 100 100">
+            <!-- DNA Helix Representation -->
+            <path class="helix-path helix-a" d="M30,20 C50,20 50,80 70,80" />
+            <path class="helix-path helix-b" d="M30,80 C50,80 50,20 70,20" />
+
+            <!-- Connection Bars -->
+            <line class="helix-bar" x1="38" y1="35" x2="62" y2="35" />
+            <line class="helix-bar" x1="45" y1="50" x2="55" y2="50" />
+            <line class="helix-bar" x1="38" y1="65" x2="62" y2="65" />
+
+            <!-- Nodes -->
+            <circle fill="#0056b3" cx="30" cy="20" r="5" />
+            <circle fill="#00a8e8" cx="30" cy="80" r="5" />
+            <circle fill="#0056b3" cx="70" cy="80" r="5" />
+            <circle fill="#00a8e8" cx="70" cy="20" r="5" />
+        </svg>
+    </div>
+    <div class="text-wrapper">
+        <h1 class="brand-name-arabic">الشافعى لاب</h1>
+        <h2 class="brand-name-english">ELSHAFEY <span class="labs-suffix">LABS</span></h2>
+    </div>
+</div>
+
+</body>
+</html>
