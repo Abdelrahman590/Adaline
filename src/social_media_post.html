@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #00a8e8;
+            --light-blue: #e3f2fd;
+            --white: #ffffff;
+            --dark: #1a1a1a;
+            --gray: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+            font-family: 'Inter', 'Cairo', sans-serif;
+        }
+
+        .post-container {
+            width: 1080px;
+            height: 1080px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+        }
+
+        .bg-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 20%, rgba(0, 168, 232, 0.08), transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 86, 179, 0.08), transparent 50%);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 80px;
+        }
+
+        .logo-small {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-small {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(0, 86, 179, 0.2);
+        }
+
+        .microscope-icon-small {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .text-small {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .arabic-small {
+            font-family: 'Cairo', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1;
+            direction: rtl;
+        }
+
+        .english-small {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 600px; /* Reduced to avoid overlap */
+        }
+
+        .headline {
+            font-size: 88px;
+            font-weight: 900;
+            color: var(--dark);
+            line-height: 1.05;
+            margin-bottom: 30px;
+            letter-spacing: -3px;
+        }
+
+        .subheadline {
+            font-size: 32px;
+            color: var(--gray);
+            line-height: 1.5;
+            margin-bottom: 60px;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 28px 56px;
+            border-radius: 60px;
+            font-size: 26px;
+            font-weight: 700;
+            width: fit-content;
+            box-shadow: 0 15px 30px rgba(0, 86, 179, 0.3);
+            cursor: pointer;
+        }
+
+        .visual-container {
+            position: absolute;
+            right: 40px; /* More padding from right */
+            bottom: 200px; /* Higher up */
+            width: 480px;
+            height: 480px;
+            z-index: 5;
+        }
+
+        .visual-card {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .visual-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+        }
+
+        .microscope-large {
+            width: 320px;
+            height: 320px;
+            fill: var(--primary-blue);
+            opacity: 0.05;
+            position: absolute;
+        }
+
+        .result-graphic {
+            width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bar {
+            height: 30px;
+            background: var(--light-blue);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 15px;
+        }
+
+        .footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 2px solid #f5f7fa;
+            padding-top: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 22px;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .contact-icon {
+            width: 28px;
+            height: 28px;
+            fill: var(--secondary-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="bg-gradient"></div>
+
+        <div class="content">
+            <div class="logo-wrapper">
+                <div class="logo-small">
+                    <div class="icon-small">
+                        <svg class="microscope-icon-small" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19,19H5V21H19V19M13,2C10.24,2 8,4.24 8,7V14.63L6.41,16.22L7.83,17.63L9.41,16.05L11,17.63L12.41,16.22L10.83,14.63V7C10.83,5.79 11.81,4.81 13.02,4.81C14.23,4.81 15.21,5.79 15.21,7V14H17.21V7C17.21,4.24 14.97,2 12.21,2M12,12A2,2 0 0,0 10,14A2,2 0 0,0 12,16A2,2 0 0,0 14,14A2,2 0 0,0 12,12Z" />
+                        </svg>
+                    </div>
+                    <div class="text-small">
+                        <div class="arabic-small">الشافعى لاب</div>
+                        <div class="english-small">Elshafey labs</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <h1 class="headline">Accurate Results You Can Trust</h1>
+                <p class="subheadline">Fast lab tests with certified quality. Advanced technology for your health and peace of mind.</p>
+                <div class="cta-button">Book Your Test Now</div>
+            </div>
+
+            <div class="footer">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                        12345
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
+                        www.elshafeylabs.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="visual-container">
+            <div class="visual-card">
+                <svg class="microscope-large" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19,19H5V21H19V19M13,2C10.24,2 8,4.24 8,7V14.63L6.41,16.22L7.83,17.63L9.41,16.05L11,17.63L12.41,16.22L10.83,14.63V7C10.83,5.79 11.81,4.81 13.02,4.81C14.23,4.81 15.21,5.79 15.21,7V14H17.21V7C17.21,4.24 14.97,2 12.21,2M12,12A2,2 0 0,0 10,14A2,2 0 0,0 12,16A2,2 0 0,0 14,14A2,2 0 0,0 12,12Z" />
+                </svg>
+                <div class="result-graphic">
+                    <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+                    <div class="bar"><div class="bar-fill" style="width: 70%;"></div></div>
+                    <div class="bar"><div class="bar-fill" style="width: 95%;"></div></div>
+                    <div class="bar"><div class="bar-fill" style="width: 65%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
