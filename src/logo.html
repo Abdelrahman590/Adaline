@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #00a8e8;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+            font-family: 'Inter', 'Cairo', sans-serif;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 40px 60px;
+            background: white;
+            border-radius: 24px;
+        }
+
+        .icon-container {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 12px 24px rgba(0, 86, 179, 0.25);
+        }
+
+        .logo-icon {
+            width: 55px;
+            height: 55px;
+            fill: white;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 34px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1.1;
+            direction: rtl;
+        }
+
+        .brand-name-english {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            letter-spacing: -0.5px;
+            margin-top: 2px;
+        }
+
+        .labs-text {
+            color: var(--secondary-blue);
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="icon-container">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <!-- Simple Microscope Icon -->
+                <path d="M19,19H5V21H19V19M13,2C10.24,2 8,4.24 8,7V14.63L6.41,16.22L7.83,17.63L9.41,16.05L11,17.63L12.41,16.22L10.83,14.63V7C10.83,5.79 11.81,4.81 13.02,4.81C14.23,4.81 15.21,5.79 15.21,7V14H17.21V7C17.21,4.24 14.97,2 12.21,2M12,12A2,2 0 0,0 10,14A2,2 0 0,0 12,16A2,2 0 0,0 14,14A2,2 0 0,0 12,12Z" />
+            </svg>
+        </div>
+        <div class="text-container">
+            <div class="brand-name-arabic">الشافعى لاب</div>
+            <div class="brand-name-english">Elshafey <span class="labs-text">labs</span></div>
+        </div>
+    </div>
+</body>
+</html>
