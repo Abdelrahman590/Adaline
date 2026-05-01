@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f4f8;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .post-container {
+            width: 1080px;
+            height: 1080px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 80px;
+            box-sizing: border-box;
+        }
+        .background-decoration {
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(67, 100, 247, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .header {
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-mini {
+            display: flex;
+            align-items: center;
+        }
+        .logo-mini-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+            border-radius: 12px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .logo-mini-text {
+            color: #1a2a6c;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .content {
+            z-index: 1;
+            margin-top: 40px;
+        }
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: #1a2a6c;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+        .subheadline {
+            font-size: 32px;
+            font-weight: 400;
+            color: #4a5568;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+        .visual-element {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, transparent 50%, rgba(67, 100, 247, 0.05) 50%);
+            z-index: 0;
+        }
+        .footer {
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .cta-button {
+            background: #4364F7;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 24px;
+            box-shadow: 0 10px 20px rgba(67, 100, 247, 0.2);
+        }
+        .contact-info {
+            text-align: right;
+            color: #718096;
+            font-size: 20px;
+        }
+        .medical-graphic {
+            position: absolute;
+            right: 80px;
+            bottom: 250px;
+            width: 350px;
+            height: 350px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="background-decoration"></div>
+        <div class="visual-element"></div>
+
+        <div class="header">
+            <div class="logo-mini">
+                <div class="logo-mini-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white">
+                        <path d="M16.94 6.94C15.65 8.23 13.73 9 12 9c-1.73 0-3.65-.77-4.94-2.06l-1.42 1.42C7.07 9.79 9.38 11 12 11c2.62 0 4.93-1.21 6.36-2.64l-1.42-1.42M12 13c-2.62 0-4.93 1.21-6.36 2.64l1.42 1.42C8.35 15.77 10.27 15 12 15c1.73 0 3.65.77 4.94 2.06l1.42-1.42C16.93 14.21 14.62 13 12 13m4.94-9.06L18.36 2.52C16.71.87 14.47 0 12 0 9.53 0 7.29.87 5.64 2.52L7.06 3.94C8.35 2.65 10.27 2 12 2c1.73 0 3.65.77 4.94 2.06M7.06 20.06L5.64 21.48C7.29 23.13 9.53 24 12 24s4.71-.87 6.36-2.52l-1.42-1.42C15.65 21.35 13.73 22 12 22s-3.65-.77-4.94-2.06z"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </div>
+                <div class="logo-mini-text">Elshafey Labs</div>
+            </div>
+            <div style="font-family: 'Cairo'; color: #4364F7; font-weight: 700; font-size: 24px;">الشافعى لاب</div>
+        </div>
+
+        <div class="content">
+            <h1 class="headline">Accurate Results<br>You Can Trust</h1>
+            <p class="subheadline">Fast lab tests with certified quality and state-of-the-art technology for your health and safety.</p>
+        </div>
+
+        <svg class="medical-graphic" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4364F7;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#6FB1FC;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="80" fill="url(#grad1)" fill-opacity="0.1" />
+            <path d="M100 40 L100 160 M40 100 L160 100" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round" opacity="0.3" />
+            <path d="M70 70 L130 130 M130 70 L70 130" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round" opacity="0.3" />
+            <rect x="70" y="60" width="60" height="80" rx="10" fill="white" stroke="url(#grad1)" stroke-width="4" />
+            <line x1="85" y1="85" x2="115" y2="85" stroke="#4364F7" stroke-width="3" />
+            <line x1="85" y1="100" x2="115" y2="100" stroke="#4364F7" stroke-width="3" />
+            <line x1="85" y1="115" x2="105" y2="115" stroke="#4364F7" stroke-width="3" />
+        </svg>
+
+        <div class="footer">
+            <div class="cta-button">Book a Test</div>
+            <div class="contact-info">
+                Modern Healthcare Solutions<br>
+                www.elshafeylabs.com
+            </div>
+        </div>
+    </div>
+</body>
+</html>
