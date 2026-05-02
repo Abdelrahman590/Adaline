@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post - Elshafey Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #004a99;
+            --secondary-blue: #00aaff;
+            --light-blue: #e6f2ff;
+            --white: #ffffff;
+            --bg-gradient: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            --text-dark: #2c3e50;
+            --text-muted: #576574;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-gradient);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+
+        .post-container {
+            width: 100%;
+            height: 100%;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        /* Decorative Background Elements */
+        .post-container::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 170, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .post-container::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 74, 153, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .header {
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mini-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mini-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mini-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name-ar {
+            font-family: 'Cairo', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        .brand-name-en {
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: var(--secondary-blue);
+            text-transform: uppercase;
+        }
+
+        .main-content {
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .headline span {
+            color: var(--primary-blue);
+        }
+
+        .subheadline {
+            font-size: 32px;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 50px;
+        }
+
+        .features {
+            display: flex;
+            gap: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .check-circle {
+            width: 30px;
+            height: 30px;
+            background: var(--secondary-blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .check-circle svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        .feature-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .footer {
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-top: 2px solid rgba(0, 74, 153, 0.1);
+            padding-top: 40px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(0, 74, 153, 0.2);
+        }
+
+        .contact-info {
+            text-align: right;
+            color: var(--text-muted);
+        }
+
+        .contact-item {
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="header">
+            <div class="mini-logo">
+                <div class="mini-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.24 10.15l-1.41-1.41-1.5 1.5c-.27-.23-.55-.44-.86-.64.13-.37.2-.76.2-1.16 0-1.93-1.57-3.5-3.5-3.5-.4 0-.79.07-1.16.2-.2-.31-.41-.59-.64-.86l1.5-1.5L7.46 1.42l-1.5 1.5c-.31-.2-.59-.41-.86-.64C5.23 2.15 5.16 2.07 5.1 2c-.06-.07-.12-.13-.17-.19L3.5 3.24c.06.06.12.11.19.17.07.06.15.13.24.2.23.27.44.55.64.86-.13.37-.2.76-.2 1.16 0 1.93 1.57 3.5 3.5 3.5.4 0 .79-.07 1.16-.2.2.31.41.59.64.86l-1.5 1.5 1.41 1.41 1.5-1.5c.27.23.55.44.86.64-.13.37-.2.76-.2 1.16 0 1.93 1.57 3.5 3.5 3.5.4 0 .79-.07 1.16-.2.2.31.41.59.64.86l-1.5 1.5 1.41 1.41 1.5-1.5c.31.2.59.41.86.64.07.06.15.13.21.19.06.07.12.13.17.19l1.43-1.42c-.06-.06-.12-.11-.19-.17-.07-.06-.15-.13-.24-.2-.23-.27-.44-.55-.64-.86.13-.37.2-.76.2-1.16 0-1.93-1.57-3.5-3.5-3.5-.4 0-.79.07-1.16.2-.2-.31-.41-.59-.64-.86l1.5-1.5zM10.5 7.44c-.79 0-1.44-.65-1.44-1.44s.65-1.44 1.44-1.44 1.44.65 1.44 1.44-.65 1.44-1.44 1.44zm3 6.12c.79 0 1.44.65 1.44 1.44s-.65 1.44-1.44 1.44-1.44-.65-1.44-1.44.65-1.44 1.44-1.44z"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name-ar">الشافعى لاب</span>
+                    <span class="brand-name-en">Elshafey labs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1 class="headline">Accurate Results <br><span>You Can Trust</span></h1>
+            <p class="subheadline">Fast lab tests with certified quality and state-of-the-art technology for your peace of mind.</p>
+            <div class="features">
+                <div class="feature-item">
+                    <div class="check-circle">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="feature-text">Certified Results</span>
+                </div>
+                <div class="feature-item">
+                    <div class="check-circle">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <span class="feature-text">Fast Turnaround</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="cta-button">Book a Test</div>
+            <div class="contact-info">
+                <div class="contact-item">www.elshafeylabs.com</div>
+                <div class="contact-item">+123 456 7890</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

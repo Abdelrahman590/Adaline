@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #004a99;
+            --secondary-blue: #00aaff;
+            --light-blue: #e6f2ff;
+            --white: #ffffff;
+            --text-dark: #333333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .icon-wrapper {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 74, 153, 0.2);
+        }
+
+        .dna-icon {
+            width: 80px;
+            height: 80px;
+            fill: var(--white);
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .brand-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .brand-english {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--secondary-blue);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container" id="logo">
+        <div class="icon-wrapper">
+            <!-- DNA Helix SVG -->
+            <svg class="dna-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.24 10.15l-1.41-1.41-1.5 1.5c-.27-.23-.55-.44-.86-.64.13-.37.2-.76.2-1.16 0-1.93-1.57-3.5-3.5-3.5-.4 0-.79.07-1.16.2-.2-.31-.41-.59-.64-.86l1.5-1.5L7.46 1.42l-1.5 1.5c-.31-.2-.59-.41-.86-.64C5.23 2.15 5.16 2.07 5.1 2c-.06-.07-.12-.13-.17-.19L3.5 3.24c.06.06.12.11.19.17.07.06.15.13.24.2.23.27.44.55.64.86-.13.37-.2.76-.2 1.16 0 1.93 1.57 3.5 3.5 3.5.4 0 .79-.07 1.16-.2.2.31.41.59.64.86l-1.5 1.5 1.41 1.41 1.5-1.5c.27.23.55.44.86.64-.13.37-.2.76-.2 1.16 0 1.93 1.57 3.5 3.5 3.5.4 0 .79-.07 1.16-.2.2.31.41.59.64.86l-1.5 1.5 1.41 1.41 1.5-1.5c.31.2.59.41.86.64.07.06.15.13.21.19.06.07.12.13.17.19l1.43-1.42c-.06-.06-.12-.11-.19-.17-.07-.06-.15-.13-.24-.2-.23-.27-.44-.55-.64-.86.13-.37.2-.76.2-1.16 0-1.93-1.57-3.5-3.5-3.5-.4 0-.79.07-1.16.2-.2-.31-.41-.59-.64-.86l1.5-1.5zM10.5 7.44c-.79 0-1.44-.65-1.44-1.44s.65-1.44 1.44-1.44 1.44.65 1.44 1.44-.65 1.44-1.44 1.44zm3 6.12c.79 0 1.44.65 1.44 1.44s-.65 1.44-1.44 1.44-1.44-.65-1.44-1.44.65-1.44 1.44-1.44z"/>
+            </svg>
+        </div>
+        <div class="text-container">
+            <h1 class="brand-arabic">الشافعى لاب</h1>
+            <div class="divider"></div>
+            <h2 class="brand-english">Elshafey labs</h2>
+        </div>
+    </div>
+</body>
+</html>
