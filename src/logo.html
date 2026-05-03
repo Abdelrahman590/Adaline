@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0052cc;
+            --secondary-blue: #00b4d8;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .logo-wrapper {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .logo-icon {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .text-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .brand-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 42px;
+            color: var(--primary-blue);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .brand-english {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+        .tagline {
+            font-size: 14px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-wrapper">
+        <div class="logo-icon">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular Background Glow -->
+                <circle cx="50" cy="50" r="45" fill="url(#bg_grad)" opacity="0.1"/>
+
+                <!-- DNA Helix -->
+                <path d="M35 25C35 25 65 40 65 50C65 60 35 75 35 75" stroke="url(#helix_grad_1)" stroke-width="8" stroke-linecap="round"/>
+                <path d="M65 25C65 25 35 40 35 50C35 60 65 75 65 75" stroke="url(#helix_grad_2)" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+
+                <!-- Connections (Rungs) -->
+                <line x1="42" y1="36" x2="58" y2="36" stroke="var(--primary-blue)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+                <line x1="42" y1="64" x2="58" y2="64" stroke="var(--primary-blue)" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+                <circle cx="50" cy="50" r="4" fill="var(--primary-blue)"/>
+
+                <defs>
+                    <linearGradient id="bg_grad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0052cc"/>
+                        <stop offset="1" stop-color="#00b4d8"/>
+                    </linearGradient>
+                    <linearGradient id="helix_grad_1" x1="35" y1="25" x2="65" y2="75" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0052cc"/>
+                        <stop offset="1" stop-color="#00b4d8"/>
+                    </linearGradient>
+                    <linearGradient id="helix_grad_2" x1="65" y1="25" x2="35" y2="75" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#0052cc"/>
+                        <stop offset="1" stop-color="#00b4d8"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="text-group">
+            <div class="brand-arabic">الشافعى لاب</div>
+            <div class="brand-english">ELSHAFEY LABS</div>
+            <div class="tagline">Medical Laboratory & Research</div>
+        </div>
+    </div>
+</body>
+</html>
