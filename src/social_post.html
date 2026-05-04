@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Social Media Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --accent-blue: #00a8e8;
+            --bg-light: #f4f7f6;
+            --text-dark: #2c3e50;
+            --white: #ffffff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .post-container {
+            width: 1080px;
+            height: 1080px;
+            background: radial-gradient(circle at top right, #ffffff, #e6f0ff);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 80px;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-small {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        .logo-text {
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-blue);
+        }
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        .subheadline {
+            font-size: 32px;
+            color: #555;
+            line-height: 1.4;
+            max-width: 600px;
+            border-left: 6px solid var(--accent-blue);
+            padding-left: 30px;
+        }
+        .visual-element {
+            position: absolute;
+            right: -50px;
+            bottom: 100px;
+            width: 600px;
+            height: 600px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0, 86, 179, 0.3);
+        }
+        .contact-info {
+            text-align: right;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 20px;
+        }
+        .floating-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            opacity: 0.05;
+        }
+        .c1 { width: 400px; height: 400px; top: -100px; right: -100px; }
+        .c2 { width: 200px; height: 200px; bottom: 200px; left: -50px; }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="floating-circles">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+        </div>
+
+        <div class="header">
+            <div class="logo-small">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6,13.4C11,13.8,11.5,14,12,14s1,-0.2,1.4,-0.6c0.8,-0.8,0.8,-2.1,0,-2.9C13,10.2,12.5,10,12,10s-1,0.2,-1.4,0.6C9.8,11.4,9.8,12.6,10.6,13.4z M12,11.5c0.3,0,0.5,0.1,0.7,0.3c0.4,0.4,0.4,1,0,1.4C12.5,13.4,12.3,13.5,12,13.5s-0.5,-0.1,-0.7,-0.3c-0.4,-0.4,-0.4,-1,0,-1.4C11.5,11.6,11.7,11.5,12,11.5z"/>
+                        <path d="M19.7,2.3c-0.4,-0.4,-1,-0.4,-1.4,0c-0.5,0.5,-1.1,1.1,-1.7,1.7c-1.3,1.3,-3.1,2.1,-5,2.1C9.6,6.1,7.8,5.4,6.5,4L4.8,2.3c-0.4,-0.4,-1,-0.4,-1.4,0s-0.4,1,0,1.4l1.7,1.7C6.6,6.9,8,8.2,9.6,9.1c-0.4,0.3,-0.7,0.7,-0.9,1.1c-0.6,0.1,-1.2,0.4,-1.6,0.8c-1.2,1.2,-1.2,3.1,0,4.2c0.4,0.4,1,0.7,1.6,0.8c0.2,0.4,0.5,0.8,0.9,1.1c-1.6,0.9,-3,2.2,-4.5,3.7l-1.7,1.7c-0.4,0.4,-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5,-0.1,0.7,-0.3l1.7,-1.7c1.3,-1.3,3.1,-2.1,5,-2.1c1.9,0,3.7,0.8,5,2.1l1.7,1.7c0.2,0.2,0.5,0.3,0.7,0.3s0.5,-0.1,0.7,-0.3c0.4,-0.4,0.4,-1,0,-1.4l-1.7,-1.7c-1.5,-1.5,-2.9,-2.8,-4.5,-3.7c0.4,-0.3,0.7,-0.7,0.9,-1.1c0.6,-0.1,1.2,-0.4,1.6,-0.8c1.2,-1.2,1.2,-3.1,0,-4.2c-0.4,-0.4,-1,-0.7,-1.6,-0.8c-0.2,-0.4,-0.5,-0.8,-0.9,-1.1c1.6,-0.9,3,-2.2,4.5,-3.7l1.7,-1.7C20.1,3.3,20.1,2.7,19.7,2.3z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">ELSHAFEY LABS</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="headline">Accurate Results You Can Trust</div>
+            <div class="subheadline">Fast lab tests with certified quality and professional medical expertise.</div>
+        </div>
+
+        <div class="visual-element">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6,13.4C11,13.8,11.5,14,12,14s1,-0.2,1.4,-0.6c0.8,-0.8,0.8,-2.1,0,-2.9C13,10.2,12.5,10,12,10s-1,0.2,-1.4,0.6C9.8,11.4,9.8,12.6,10.6,13.4z M12,11.5c0.3,0,0.5,0.1,0.7,0.3c0.4,0.4,0.4,1,0,1.4C12.5,13.4,12.3,13.5,12,13.5s-0.5,-0.1,-0.7,-0.3c-0.4,-0.4,-0.4,-1,0,-1.4C11.5,11.6,11.7,11.5,12,11.5z"/>
+                <path d="M19.7,2.3c-0.4,-0.4,-1,-0.4,-1.4,0c-0.5,0.5,-1.1,1.1,-1.7,1.7c-1.3,1.3,-3.1,2.1,-5,2.1C9.6,6.1,7.8,5.4,6.5,4L4.8,2.3c-0.4,-0.4,-1,-0.4,-1.4,0s-0.4,1,0,1.4l1.7,1.7C6.6,6.9,8,8.2,9.6,9.1c-0.4,0.3,-0.7,0.7,-0.9,1.1c-0.6,0.1,-1.2,0.4,-1.6,0.8c-1.2,1.2,-1.2,3.1,0,4.2c0.4,0.4,1,0.7,1.6,0.8c0.2,0.4,0.5,0.8,0.9,1.1c-1.6,0.9,-3,2.2,-4.5,3.7l-1.7,1.7c-0.4,0.4,-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5,-0.1,0.7,-0.3l1.7,-1.7c1.3,-1.3,3.1,-2.1,5,-2.1c1.9,0,3.7,0.8,5,2.1l1.7,1.7c0.2,0.2,0.5,0.3,0.7,0.3s0.5,-0.1,0.7,-0.3c0.4,-0.4,0.4,-1,0,-1.4l-1.7,-1.7c-1.5,-1.5,-2.9,-2.8,-4.5,-3.7c0.4,-0.3,0.7,-0.7,0.9,-1.1c0.6,-0.1,1.2,-0.4,1.6,-0.8c1.2,-1.2,1.2,-3.1,0,-4.2c-0.4,-0.4,-1,-0.7,-1.6,-0.8c-0.2,-0.4,-0.5,-0.8,-0.9,-1.1c1.6,-0.9,3,-2.2,4.5,-3.7l1.7,-1.7C20.1,3.3,20.1,2.7,19.7,2.3z"/>
+            </svg>
+        </div>
+
+        <div class="footer">
+            <div class="cta-button">Book Your Test</div>
+            <div class="contact-info">
+                www.elshafeylabs.com<br>
+                +20 123 456 7890
+            </div>
+        </div>
+    </div>
+</body>
+</html>
