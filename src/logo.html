@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0052D4 0%, #4364F7 50%, #6FB1FC 100%);
+            border-radius: 15px;
+            position: relative;
+        }
+        /* DNA Helix SVG */
+        .dna-icon {
+            width: 44px;
+            height: 44px;
+            fill: white;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .brand-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a2a6c;
+            line-height: 1.2;
+            direction: rtl;
+        }
+        .brand-english {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #4364F7;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="icon-container">
+            <svg class="dna-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" style="display:none"/>
+                <!-- Microscope Icon -->
+                <path d="M19 19h-1.54c.28-.6.44-1.28.44-2 0-2.76-2.24-5-5-5h-1V3H9v2h2v7h-1c-2.76 0-5 2.24-5 5 0 .72.16 1.4.44 2H4v2h15v-2zM9 17c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v2H9v-2z"/>
+            </svg>
+        </div>
+        <div class="text-container">
+            <span class="brand-arabic">الشافعى لاب</span>
+            <span class="brand-english">Elshafey Labs</span>
+            <span class="tagline">Medical Analysis Laboratory</span>
+        </div>
+    </div>
+</body>
+</html>
