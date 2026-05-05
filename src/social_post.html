@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0052D4;
+            --secondary: #4364F7;
+            --accent: #6FB1FC;
+            --dark: #1a2a6c;
+            --light: #f8fbff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+        .post-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, #eef2f3 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 80px;
+            box-sizing: border-box;
+        }
+        /* Background decorative elements */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(67, 100, 247, 0.05) 0%, rgba(111, 177, 252, 0.05) 100%);
+            z-index: 0;
+        }
+        .circle-1 { width: 600px; height: 600px; top: -100px; right: -100px; }
+        .circle-2 { width: 400px; height: 400px; bottom: -50px; left: -100px; }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        .logo-small {
+            display: flex;
+            align-items: center;
+        }
+        .icon-small {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon-small svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        .logo-text-small {
+            display: flex;
+            flex-direction: column;
+        }
+        .brand-ar-small { font-family: 'Cairo'; font-weight: 700; color: var(--dark); font-size: 20px; line-height: 1; }
+        .brand-en-small { font-weight: 700; color: var(--secondary); font-size: 14px; text-transform: uppercase; }
+
+        .main-content {
+            z-index: 10;
+            max-width: 650px;
+        }
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+        .subheadline {
+            font-size: 32px;
+            color: #555;
+            line-height: 1.4;
+            margin-bottom: 50px;
+            border-left: 6px solid var(--secondary);
+            padding-left: 25px;
+        }
+
+        .features {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-item {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #f0f4ff;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary);
+            font-size: 24px;
+        }
+        .feature-text { font-weight: 700; color: var(--dark); font-size: 18px; }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+        }
+        .contact-info {
+            display: flex;
+            gap: 40px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: #777;
+            font-weight: 600;
+        }
+        .contact-item i { margin-right: 10px; color: var(--secondary); }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 10px 20px rgba(67, 100, 247, 0.3);
+        }
+
+        /* Abstract Medical Illustration */
+        .illustration {
+            position: absolute;
+            right: 50px;
+            top: 250px;
+            width: 400px;
+            height: 400px;
+            opacity: 0.15;
+            background-image: radial-gradient(var(--secondary) 2px, transparent 2px);
+            background-size: 30px 30px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="illustration"></div>
+
+        <div class="header">
+            <div class="logo-small">
+                <div class="icon-small">
+            <svg viewBox="0 0 24 24"><path d="M19 19h-1.54c.28-.6.44-1.28.44-2 0-2.76-2.24-5-5-5h-1V3H9v2h2v7h-1c-2.76 0-5 2.24-5 5 0 .72.16 1.4.44 2H4v2h15v-2zM9 17c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v2H9v-2z"/></svg>
+                </div>
+                <div class="logo-text-small">
+                    <span class="brand-ar-small">الشافعى لاب</span>
+                    <span class="brand-en-small">Elshafey Labs</span>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span>Quality Certified</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1 class="headline">Accurate Results <br>You Can Trust</h1>
+            <p class="subheadline">Fast lab tests with certified quality for you and your family.</p>
+
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">High Accuracy</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏱</div>
+                    <div class="feature-text">Fast Results</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡</div>
+                    <div class="feature-text">Safe & Clean</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <div class="contact-item">www.elshafeylabs.com</div>
+                <div class="contact-item">Book Your Test Now</div>
+            </div>
+            <div class="cta-button">Visit Our Lab</div>
+        </div>
+    </div>
+</body>
+</html>
