@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Logo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #logo-container {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: white;
+            border-radius: 12px;
+        }
+        .icon-container {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #004e92, #00aaff);
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 170, 255, 0.2);
+        }
+        .dna-icon {
+            width: 60px;
+            height: 60px;
+            fill: #ffffff;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .brand-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #004e92;
+            line-height: 1.1;
+            margin: 0;
+        }
+        .brand-english {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #444;
+            letter-spacing: 2px;
+            margin-top: 2px;
+            text-transform: uppercase;
+        }
+        .brand-accent {
+            color: #00aaff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo-container">
+        <div class="icon-container">
+            <!-- Microscope SVG -->
+            <svg class="dna-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19,19H5V21H19V19M12,2A3,3 0 0,0 9,5V7H11V5A1,1 0 0,1 12,4A1,1 0 0,1 13,5V7H15V5A3,3 0 0,0 12,2M11,8V15H13V8H11M7,10V18H9V10H7M15,10V18H17V10H15Z" />
+            </svg>
+        </div>
+        <div class="text-container">
+            <h1 class="brand-arabic">الشافعى لاب</h1>
+            <div class="brand-english">Elshafey - <span class="brand-accent">labs</span></div>
+        </div>
+    </div>
+</body>
+</html>
