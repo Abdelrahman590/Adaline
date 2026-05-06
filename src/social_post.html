@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Social Media Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #post-container {
+            width: 1080px;
+            height: 1080px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .background-blob {
+            position: absolute;
+            width: 1500px;
+            height: 1500px;
+            background: radial-gradient(circle, rgba(0, 78, 146, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+        }
+        .header {
+            padding: 60px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+        .logo-small {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #004e92, #000428);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-arabic {
+            font-family: 'Cairo', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #004e92;
+            line-height: 1;
+        }
+        .logo-english {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+        }
+        .content {
+            padding: 0 80px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: #003366;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+        .subheadline {
+            font-size: 32px;
+            color: #555;
+            line-height: 1.4;
+            margin-bottom: 50px;
+            max-width: 600px;
+            border-left: 6px solid #00aaff;
+            padding-left: 25px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #004e92, #00aaff);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 25px rgba(0, 170, 255, 0.3);
+            align-self: flex-start;
+        }
+        .image-placeholder {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 600px;
+            height: 700px;
+            background: linear-gradient(to top, rgba(0, 78, 146, 0.1), transparent);
+            border-top-left-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 1;
+        }
+        .microscope-illustration {
+            width: 500px;
+            height: 500px;
+            opacity: 0.15;
+            margin-bottom: 50px;
+        }
+        .footer {
+            padding: 40px 80px;
+            background: #f8fbff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+            border-top: 1px solid #eee;
+        }
+        .contact-info {
+            display: flex;
+            gap: 40px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            color: #004e92;
+            font-weight: 600;
+        }
+        .badge {
+            background: #e1f5fe;
+            color: #01579b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="post-container">
+        <div class="background-blob"></div>
+
+        <div class="header">
+            <div class="logo-small">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.38 12.01l.48-.48c.17-.17.17-.45 0-.62-.17-.17-.45-.17-.62 0l-.48.48c-.17.17-.17.45 0 .62.17.17.45.17.62 0zM15.42 8.97c.17-.17.17-.45 0-.62-.17-.17-.45-.17-.62 0l-.48.48c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.48-.48zM9.34 15.05c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.48-.48c.17-.17.17-.45 0-.62-.17-.17-.45-.17-.62 0l-.48.48zM17.48 4.41c-.48-.48-1.28-.48-1.77 0l-.62.62c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.62-.62c.13-.13.35-.13.48 0l2.77 2.77c.13.13.13.35 0 .48l-.62.62c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.62-.62c.49-.49.49-1.28 0-1.77l-2.72-2.72zM6.52 15.37l-.62.62c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.62-.62c.13-.13.35-.13.48 0l2.77 2.77c.13.13.13.35 0 .48l-.62.62c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.62-.62c.49-.49.49-1.28 0-1.77l-2.72-2.72c-.49-.49-1.28-.49-1.77 0zM20.25 10.75c-.17-.17-.45-.17-.62 0l-.48.48c-.17.17-.17.45 0 .62.17.17.45.17.62 0l.48-.48c.17-.17.17-.45 0-.62zM3.75 13.25c.17.17.45.17.62 0l.48-.48c.17-.17.17-.45 0-.62-.17-.17-.45-.17-.62 0l-.48.48c-.17.17-.17.45 0 .62z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-arabic">الشافعى لاب</span>
+                    <span class="logo-english">ELSHAFEY LABS</span>
+                </div>
+            </div>
+            <div class="badge">ISO 9001 CERTIFIED</div>
+        </div>
+
+        <div class="content">
+            <h1 class="headline">Accurate Results You Can Trust</h1>
+            <p class="subheadline">Fast lab tests with certified quality and advanced medical technology.</p>
+            <div class="cta-button">Book Your Test Now</div>
+        </div>
+
+        <div class="image-placeholder">
+            <!-- Microscope SVG Illustration -->
+            <svg class="microscope-illustration" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M19,19H5V21H19V19M12,2A3,3 0 0,0 9,5V7H11V5A1,1 0 0,1 12,4A1,1 0 0,1 13,5V7H15V5A3,3 0 0,0 12,2M11,8V15H13V8H11M7,10V18H9V10H7M15,10V18H17V10H15Z" />
+            </svg>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span> +123 456 789
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span> www.elshafeylabs.com
+                </div>
+            </div>
+            <div class="contact-item">
+                <span>📍</span> Cairo, Egypt
+            </div>
+        </div>
+    </div>
+</body>
+</html>
