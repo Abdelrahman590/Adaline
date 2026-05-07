@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elshafey Labs Social Media Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --light-blue: #00a8e8;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --white: #ffffff;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 1080px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8fafc;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .post-container {
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, #e0f2fe, #ffffff);
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Background elements */
+        .bg-circle {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 86, 179, 0.05), rgba(0, 168, 232, 0.05));
+            top: -100px;
+            right: -100px;
+            z-index: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            margin-bottom: 80px;
+        }
+        .logo-small {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-icon svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-text .ar { font-family: 'Cairo', sans-serif; font-size: 24px; font-weight: 700; color: var(--primary-blue); line-height: 1; }
+        .logo-text .en { font-size: 16px; font-weight: 600; color: var(--text-dark); letter-spacing: 1px; text-transform: uppercase; }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+        }
+        .headline {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 800px;
+        }
+        .subheadline {
+            font-size: 32px;
+            color: var(--text-light);
+            line-height: 1.4;
+            margin-bottom: 48px;
+            max-width: 700px;
+        }
+        .cta-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .btn {
+            padding: 20px 40px;
+            background-color: var(--primary-blue);
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2);
+        }
+
+        .visual-element {
+            position: absolute;
+            bottom: 60px;
+            right: 60px;
+            width: 450px;
+            height: 450px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .visual-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Placeholder for a professional medical image */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-blue);
+        }
+        .dna-large {
+            width: 200px;
+            height: 200px;
+            opacity: 0.2;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            z-index: 10;
+        }
+        .contact-info {
+            display: flex;
+            gap: 30px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            font-size: 18px;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--accent-green);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="bg-circle"></div>
+
+        <div class="header">
+            <div class="logo-small">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,2c-0.3,0-0.6,0.1-0.9,0.2c-0.6,0.4-1,1.1-1,1.8c0,0.6,0.2,1.2,0.6,1.6c0.5,0.4,1.1,0.6,1.8,0.4 c0.6-0.1,1.1-0.6,1.4-1.2C14.1,4,13.7,3.1,13,2.4C12.7,2.1,12.4,2,12,2z M12,22c0.3,0,0.6-0.1,0.9-0.2c0.6-0.4,1-1.1,1-1.8 c0-0.6-0.2-1.2-0.6-1.6c-0.5-0.4-1.1-0.6-1.8-0.4c-0.6,0.1-1.1,0.6-1.4,1.2c-0.2,0.8,0.1,1.7,0.8,2.4C11.3,21.9,11.6,22,12,22z M17,12c0.6-1.4,1.1-2.9,1.1-4.5c0-1.2-0.3-2.3-0.7-3.4c-0.2-0.4-0.4-0.9-0.7-1.3l-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2 c-0.1-0.1-0.2-0.2-0.3-0.2c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.4,0.6-0.4,1c0.1,0.4,0.3,0.8,0.5,1.2c0.5,1.3,0.7,2.7,0.7,4.1 c0,1.2-0.3,2.4-0.8,3.5L12,12l-3.2-0.1c-0.5-1.1-0.8-2.3-0.8-3.5c0-1.4,0.2-2.8,0.7-4.1c0.2-0.4,0.4-0.8,0.5-1.2c0-0.4-0.1-0.8-0.4-1 c-0.3-0.2-0.7-0.2-1,0c-0.1,0.1-0.2,0.1-0.3,0.2c0,0-0.1,0.1-0.1,0.2l-0.1,0.2C7,3,6.7,3.5,6.5,3.9c-0.4,1.1-0.7,2.2-0.7,3.4 c0,1.6,0.5,3.1,1.1,4.5c0.6,1.4,1.4,2.7,2.4,3.8L12,12l2.7,3.8C15.6,14.7,16.4,13.4,17,12z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="ar">الشافعى لاب</span>
+                    <span class="en">Elshafey Labs</span>
+                </div>
+            </div>
+            <div class="badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                ISO Certified Quality
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1 class="headline">Accurate Results <br><span style="color: var(--primary-blue)">You Can Trust</span></h1>
+            <p class="subheadline">Fast lab tests with certified quality and advanced medical technology for your health safety.</p>
+            <div class="cta-section">
+                <div class="btn">Book a Visit</div>
+            </div>
+        </div>
+
+        <div class="visual-element">
+            <div class="image-placeholder">
+                <svg class="dna-large" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2c-0.3,0-0.6,0.1-0.9,0.2c-0.6,0.4-1,1.1-1,1.8c0,0.6,0.2,1.2,0.6,1.6c0.5,0.4,1.1,0.6,1.8,0.4 c0.6-0.1,1.1-0.6,1.4-1.2C14.1,4,13.7,3.1,13,2.4C12.7,2.1,12.4,2,12,2z M12,22c0.3,0,0.6-0.1,0.9-0.2c0.6-0.4,1-1.1,1-1.8 c0-0.6-0.2-1.2-0.6-1.6c-0.5-0.4-1.1-0.6-1.8-0.4c-0.6,0.1-1.1,0.6-1.4,1.2c-0.2,0.8,0.1,1.7,0.8,2.4C11.3,21.9,11.6,22,12,22z M17,12c0.6-1.4,1.1-2.9,1.1-4.5c0-1.2-0.3-2.3-0.7-3.4c-0.2-0.4-0.4-0.9-0.7-1.3l-0.1-0.2c0-0.1-0.1-0.1-0.1-0.2 c-0.1-0.1-0.2-0.2-0.3-0.2c-0.3-0.2-0.7-0.2-1,0c-0.3,0.2-0.4,0.6-0.4,1c0.1,0.4,0.3,0.8,0.5,1.2c0.5,1.3,0.7,2.7,0.7,4.1 c0,1.2-0.3,2.4-0.8,3.5L12,12l-3.2-0.1c-0.5-1.1-0.8-2.3-0.8-3.5c0-1.4,0.2-2.8,0.7-4.1c0.2-0.4,0.4-0.8,0.5-1.2c0-0.4-0.1-0.8-0.4-1 c-0.3-0.2-0.7-0.2-1,0c-0.1,0.1-0.2,0.1-0.3,0.2c0,0-0.1,0.1-0.1,0.2l-0.1,0.2C7,3,6.7,3.5,6.5,3.9c-0.4,1.1-0.7,2.2-0.7,3.4 c0,1.6,0.5,3.1,1.1,4.5c0.6,1.4,1.4,2.7,2.4,3.8L12,12l2.7,3.8C15.6,14.7,16.4,13.4,17,12z"/>
+                </svg>
+                <div style="font-weight: 700; font-size: 24px;">Advanced Diagnostics</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Call: 12345
+                </div>
+                <div class="contact-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Visit our branches
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
